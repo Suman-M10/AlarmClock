@@ -1,0 +1,152 @@
+/*styling for the overall window*/
+body{
+    margin:0;
+    padding:0;
+    background-color:#6289ac;
+}
+/*styling for container*/
+.container{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+/*styling for clock*/
+#clock{
+    /*border:solid 1px;*/
+    border-radius:10%;
+    font-family: sans-serif;
+    font-size:6vw;
+    background-image:linear-gradient(
+        180deg,
+        rgb(243 2 30) 0%,
+        rgb(245, 245, 243) 50%,
+        #158a17 100%
+        );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/*styling for input field*/
+input{
+    width:19vw;
+    border:2px solid hwb(0 16% 73% / 0.16);
+    border-radius:4px;
+    display:block;
+    font-size:14px;
+    padding:10px 15px;
+    margin:0px 0px 20px 0px;
+}
+/* styling for buttons*/
+.button {
+  align-items: center;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button:hover:after {
+  transform: translate(0, 0);
+}
+.set-alarm:active{
+    color:black;
+    background-color: #c9f5d9;
+    outline:0;
+}
+.clear-alarm:active{
+    color:black;
+    background-color:  #ffdeda;
+    outline:0;
+}
+
+.button:hover {
+  outline: 0;
+}
+.set-alarm{
+    background-color: #2ebf63;
+}
+.clear-alarm{
+    background-color: hsl(345, 87%, 60%);
+}
+#alarmList{
+    list-style-type: none;
+    margin-left:-30px;
+
+}
+/*Styling for alarm list*/
+#alarmList li{
+    height:5vh;
+    width:20vw;
+    background-color: antiquewhite;
+    display:flex;
+    margin:10px;
+    padding:10px;
+    border:solid 1px;
+    box-shadow: hsla(345, 93%, 55%, 0.596) -5px 5px, hwb(60 94% 5% / 0.584) -10px 10px, #e4dbe163 -15px 15px, hsla(110, 87%, 56%, 0.237) -20px 20px, hsla(115, 87%, 56%, 0.119) -25px 25px;
+}
+/*Styling for time written in alarm list*/
+#alarmList li p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    color:black;
+    display:inline-block;
+    margin:auto;
+    padding-left: 2rem;
+}
+/*styling for delete  button in alarm list*/
+#deleteButton{
+    color:white;
+    background-color:hsl(345, 87%, 60%);
+    border:solid 1px;
+    border-color:black;
+    border-radius:8px;
+    cursor:pointer;
+    align-items: center;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-family:sans-serif;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
